@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, CheckCircle2, AlertCircle } from "lucide-react";
 
 const TOPICS = [
   "Satellite Broadcast",
@@ -11,43 +11,69 @@ const TOPICS = [
   "Something else",
 ];
 
-const SUPPORT_INBOX = "support@hd-networks.com";
-const SALES_INBOX = "sales@hd-networks.com";
+type Status = "idle" | "submitting" | "success" | "error";
 
 export default function ContactForm() {
-  const [sent, setSent] = useState(false);
-  const [recipient, setRecipient] = useState(SALES_INBOX);
+  const [status, setStatus] = useState<Status>("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  function handleSubmit(e: FormEvent<HTMLFormElement>) {
+  async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const form = new FormData(e.currentTarget);
-    const name = String(form.get("name") || "");
-    const company = String(form.get("company") || "");
-    const email = String(form.get("email") || "");
-    const topic = String(form.get("topic") || "");
-    const message = String(form.get("message") || "");
+    const form = e.currentTarget;
+    const data = new FormData(form);
+    const payload = {
+      name: String(data.get("name") || ""),
+      company: String(data.get("company") || ""),
+      email: String(data.get("email") || ""),
+      topic: String(data.get("topic") || ""),
+      message: String(data.get("message") || ""),
+      website: String(data.get("website") || ""),
+    };
 
-    const to = topic === "IT Support & Managed Services" ? SUPPORT_INBOX : SALES_INBOX;
-    setRecipient(to);
+    setStatus("submitting");
+    setErrorMessage("");
 
-    const subject = `Enquiry: ${topic || "General"} — ${company || name}`;
-    const body = [
-      `Name: ${name}`,
-      `Company: ${company}`,
-      `Email: ${email}`,
-      `Topic: ${topic}`,
-      "",
-      message,
-    ].join("\n");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+      const result = await res.json().catch(() => ({}));
+      if (!res.ok) {
+        throw new Error(result.error || "Something went wrong. Please try again.");
+      }
+      setStatus("success");
+      form.reset();
+    } catch (err) {
+      setStatus("error");
+      setErrorMessage(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    }
+  }
 
-    window.location.href = `mailto:${to}?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(body)}`;
-    setSent(true);
+  if (status === "success") {
+    return (
+      <div className="flex flex-col items-center text-center py-14">
+        <CheckCircle2 size={36} className="text-signal-blue mb-4" strokeWidth={1.75} />
+        <p className="font-heading font-semibold text-lg mb-2">Message sent</p>
+        <p className="text-slate text-sm max-w-xs">
+          Thanks — we&rsquo;ve received your message and will be in touch shortly.
+        </p>
+      </div>
+    );
   }
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      <input
+        type="text"
+        name="website"
+        tabIndex={-1}
+        autoComplete="off"
+        className="hidden"
+        aria-hidden="true"
+      />
+
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <Field label="Full name" name="name" required />
         <Field label="Company" name="company" />
@@ -90,14 +116,21 @@ export default function ContactForm() {
         else reaches sales.
       </p>
 
-      <button type="submit" className="btn-primary">
-        Send message
+      <button type="submit" className="btn-primary disabled:opacity-60" disabled={status === "submitting"}>
+        {status === "submitting" ? "Sending…" : "Send message"}
         <ArrowUpRight size={16} strokeWidth={2.5} />
       </button>
 
-      {sent && (
-        <p className="font-mono text-xs text-signal-blue uppercase tracking-wide">
-          Opening your email client to send this to {recipient}&hellip;
+      {status === "error" && (
+        <p className="flex items-start gap-2 text-signal-red text-sm">
+          <AlertCircle size={16} className="mt-0.5 shrink-0" />
+          <span>
+            {errorMessage} You can also email us directly at{" "}
+            <a href="mailto:sales@hd-networks.com" className="underline">
+              sales@hd-networks.com
+            </a>
+            .
+          </span>
         </p>
       )}
     </form>
