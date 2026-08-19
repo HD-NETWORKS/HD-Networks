@@ -112,8 +112,7 @@ export default function ContactForm() {
       </div>
 
       <p className="text-slate text-xs">
-        Technical support requests are routed to our support team; everything
-        else reaches sales.
+        Your message reaches both our sales and support teams.
       </p>
 
       <button type="submit" className="btn-primary disabled:opacity-60" disabled={status === "submitting"}>
