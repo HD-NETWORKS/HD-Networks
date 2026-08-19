@@ -4,6 +4,7 @@ import { Satellite, Database, LifeBuoy, Network, ArrowUpRight } from "lucide-rea
 import PageHero from "@/components/PageHero";
 import Reveal from "@/components/Reveal";
 import FootprintVisual from "@/components/FootprintVisual";
+import BackgroundVideo from "@/components/BackgroundVideo";
 
 export const metadata: Metadata = {
   title: "Services",
@@ -171,8 +172,29 @@ export default function ServicesPage() {
         </div>
       </section>
 
-      {SERVICES.slice(1).map((service, i) => (
-        <ServiceSection key={service.id} service={service} idx={i + 2} />
+      <ServiceSection service={SERVICES[1]} idx={2} />
+
+      <section className="relative h-[380px] md:h-[480px] overflow-hidden bg-ink">
+        <BackgroundVideo
+          webm="/video/datacenter-loop.webm"
+          mp4="/video/datacenter-loop.mp4"
+          poster="/video/datacenter-poster.jpg"
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/60 to-ink/20" aria-hidden />
+        <div className="absolute inset-0 bg-signal-blue/25 mix-blend-multiply" aria-hidden />
+        <div className="relative container-hd h-full flex items-end pb-12 md:pb-16">
+          <Reveal>
+            <p className="eyebrow text-signal-red mb-3">Inside the network</p>
+            <p className="font-heading font-bold text-2xl md:text-3xl text-white max-w-lg leading-snug">
+              Real racks, real uplinks — monitored around the clock, not just on the brochure.
+            </p>
+          </Reveal>
+        </div>
+      </section>
+
+      {SERVICES.slice(2).map((service, i) => (
+        <ServiceSection key={service.id} service={service} idx={i + 3} />
       ))}
 
       <section className="relative bg-signal-blue overflow-hidden">
