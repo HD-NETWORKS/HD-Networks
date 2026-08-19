@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Satellite broadcast, data center & colocation, managed IT support, and network connectivity — engineered and monitored across the UK and Nigeria.",
+    "Satellite broadcast, data center & colocation, managed IT support, and network connectivity — engineered and monitored for clients worldwide from London and Lagos.",
 };
 
 const SERVICES = [
@@ -63,7 +63,7 @@ const SERVICES = [
     eyebrow: "Connectivity",
     title: "Network & Connectivity",
     description:
-      "Resilient connectivity linking sites across the UK and Nigeria to each other, to the cloud, and to the wider internet.",
+      "Resilient connectivity linking client sites worldwide to each other, to our London and Lagos hubs, and to the cloud.",
     features: [
       { t: "Dedicated internet access", d: "Symmetrical, business-grade bandwidth with defined SLAs." },
       { t: "Point-to-point links", d: "Private links between sites, data centers and teleports." },

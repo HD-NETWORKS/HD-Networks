@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     template: "%s — HD Networks",
   },
   description:
-    "HD Networks engineers and operates satellite broadcast, data center & colocation, and managed IT infrastructure across the UK and Nigeria — monitored 24/7, built to stay on air.",
+    "HD Networks engineers and operates satellite broadcast, data center & colocation, and managed IT infrastructure for clients worldwide, from London and Lagos — monitored 24/7, built to stay on air.",
   keywords: [
     "satellite broadcast",
     "teleport services",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "HD Networks — Satellite Broadcast, Data Center & IT Infrastructure",
     description:
-      "Engineering signal, space and support across the UK and Nigeria — satellite broadcast, colocation, and managed IT, monitored 24/7.",
+      "Engineering signal, space and support for clients worldwide — satellite broadcast, colocation, and managed IT, monitored 24/7 from London and Lagos.",
     url: "https://hd-networks.com",
     siteName: "HD Networks",
     type: "website",

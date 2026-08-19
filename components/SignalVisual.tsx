@@ -15,13 +15,13 @@ export default function SignalVisual() {
         <ellipse cx="80" cy="95" rx="46" ry="46" stroke="#3E4095" strokeWidth="1.5" opacity="0.5" />
         <circle cx="80" cy="95" r="4" fill="#ED3237" />
         <text x="80" y="152" textAnchor="middle" className="font-mono" fontSize="10" fill="#8A8CA8">
-          UK
+          LONDON
         </text>
 
         <ellipse cx="320" cy="95" rx="46" ry="46" stroke="#3E4095" strokeWidth="1.5" opacity="0.5" />
         <circle cx="320" cy="95" r="4" fill="#ED3237" />
         <text x="320" y="152" textAnchor="middle" className="font-mono" fontSize="10" fill="#8A8CA8">
-          NIGERIA
+          LAGOS
         </text>
 
         <path
@@ -55,7 +55,7 @@ export default function SignalVisual() {
 
       <div className="grid grid-cols-3 gap-4 mt-8 pt-6 border-t border-white/10">
         <div>
-          <p className="font-heading font-bold text-lg text-white">99.99%</p>
+          <p className="font-heading font-bold text-lg text-white">99.9%</p>
           <p className="font-mono text-[10px] text-white/40 uppercase tracking-wide mt-1">Uptime target</p>
         </div>
         <div>
@@ -64,7 +64,7 @@ export default function SignalVisual() {
         </div>
         <div>
           <p className="font-heading font-bold text-lg text-white">2</p>
-          <p className="font-mono text-[10px] text-white/40 uppercase tracking-wide mt-1">Regions served</p>
+          <p className="font-mono text-[10px] text-white/40 uppercase tracking-wide mt-1">Global offices</p>
         </div>
       </div>
     </div>

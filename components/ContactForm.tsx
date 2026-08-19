@@ -11,8 +11,12 @@ const TOPICS = [
   "Something else",
 ];
 
+const SUPPORT_INBOX = "support@hd-networks.com";
+const SALES_INBOX = "sales@hd-networks.com";
+
 export default function ContactForm() {
   const [sent, setSent] = useState(false);
+  const [recipient, setRecipient] = useState(SALES_INBOX);
 
   function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -22,6 +26,9 @@ export default function ContactForm() {
     const email = String(form.get("email") || "");
     const topic = String(form.get("topic") || "");
     const message = String(form.get("message") || "");
+
+    const to = topic === "IT Support & Managed Services" ? SUPPORT_INBOX : SALES_INBOX;
+    setRecipient(to);
 
     const subject = `Enquiry: ${topic || "General"} — ${company || name}`;
     const body = [
@@ -33,7 +40,7 @@ export default function ContactForm() {
       message,
     ].join("\n");
 
-    window.location.href = `mailto:info@hd-networks.com?subject=${encodeURIComponent(
+    window.location.href = `mailto:${to}?subject=${encodeURIComponent(
       subject
     )}&body=${encodeURIComponent(body)}`;
     setSent(true);
@@ -78,6 +85,11 @@ export default function ContactForm() {
         />
       </div>
 
+      <p className="text-slate text-xs">
+        Technical support requests are routed to our support team; everything
+        else reaches sales.
+      </p>
+
       <button type="submit" className="btn-primary">
         Send message
         <ArrowUpRight size={16} strokeWidth={2.5} />
@@ -85,7 +97,7 @@ export default function ContactForm() {
 
       {sent && (
         <p className="font-mono text-xs text-signal-blue uppercase tracking-wide">
-          Opening your email client to send this to info@hd-networks.com&hellip;
+          Opening your email client to send this to {recipient}&hellip;
         </p>
       )}
     </form>

@@ -7,7 +7,7 @@ import Reveal from "@/components/Reveal";
 export const metadata: Metadata = {
   title: "About",
   description:
-    "HD Networks is a UK and Nigeria-based infrastructure provider spanning satellite broadcast, data center & colocation, and managed IT services.",
+    "HD Networks is a global infrastructure provider, headquartered in London and Lagos, spanning satellite broadcast, data center & colocation, and managed IT services.",
 };
 
 const VALUES = [
@@ -23,8 +23,8 @@ const VALUES = [
   },
   {
     icon: Globe2,
-    title: "Two regions, one team",
-    body: "Our UK and Nigeria operations share tooling, escalation paths and reporting — infrastructure doesn't behave differently by postcode.",
+    title: "Two hubs, one team",
+    body: "Our London and Lagos operations centers share tooling, escalation paths and reporting — serving clients worldwide to the same standard.",
   },
   {
     icon: Users,
@@ -39,7 +39,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About HD Networks"
         title="Infrastructure built the way broadcast is built — to stay on."
-        description="HD Networks is an infrastructure provider spanning satellite broadcast, data center & colocation, and managed IT — operating across the UK and Nigeria under a single technical standard."
+        description="HD Networks is an infrastructure provider spanning satellite broadcast, data center & colocation, and managed IT — serving clients worldwide from operations centers in London and Lagos."
       />
 
       <section className="py-24 md:py-28">
@@ -73,7 +73,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <p className="font-heading font-bold text-3xl text-white">2</p>
-                  <p className="eyebrow text-white/40 mt-2">Regions: UK &amp; Nigeria</p>
+                  <p className="eyebrow text-white/40 mt-2">Offices: London &amp; Lagos</p>
                 </div>
                 <div>
                   <p className="font-heading font-bold text-3xl text-white">4</p>

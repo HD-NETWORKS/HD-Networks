@@ -39,7 +39,7 @@ const SERVICES = [
     index: "04",
     title: "Network & Connectivity",
     description:
-      "Resilient last-mile and backbone connectivity linking UK and Nigeria sites to the wider world.",
+      "Resilient last-mile and backbone connectivity linking client sites worldwide to the wider world.",
     points: ["Dedicated internet access", "Point-to-point links", "Redundant routing paths"],
     href: "/services#network",
   },
@@ -53,8 +53,8 @@ const CAPABILITIES = [
   },
   {
     n: "02",
-    title: "Two regions, one standard",
-    body: "UK and Nigeria operations run to the same monitoring, escalation and reporting standard, wherever your infrastructure sits.",
+    title: "Two hubs, one standard",
+    body: "Our London and Lagos operations centers run to the same monitoring, escalation and reporting standard, wherever in the world your infrastructure sits.",
   },
   {
     n: "03",
@@ -80,7 +80,7 @@ export default function HomePage() {
               <Reveal>
                 <p className="eyebrow text-signal-red mb-6 flex items-center gap-2">
                   <RadioTower size={14} />
-                  UK &amp; Nigeria &middot; Broadcast &amp; Infrastructure
+                  London &amp; Lagos &middot; Serving Clients Worldwide
                 </p>
               </Reveal>
               <Reveal delay={80}>
@@ -93,7 +93,8 @@ export default function HomePage() {
                 <p className="text-white/60 text-lg leading-relaxed max-w-xl mt-7">
                   HD Networks engineers and operates satellite broadcast links,
                   data center &amp; colocation space, and managed IT infrastructure —
-                  monitored around the clock across the UK and Nigeria.
+                  monitored around the clock for clients worldwide, from our
+                  London and Lagos operations centers.
                 </p>
               </Reveal>
               <Reveal delay={240}>
@@ -118,10 +119,10 @@ export default function HomePage() {
         <div className="bar-divider" />
         <div className="container-hd">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 py-14">
-            <StatCounter value={99.99} decimals={2} suffix="%" label="Uptime target" />
+            <StatCounter value={99.9} decimals={1} suffix="%" label="Uptime target" />
             <StatCounter value={24} suffix="/7" label="NOC monitoring" />
-            <StatCounter value={2} label="Regions: UK & Nigeria" />
-            <StatCounter value={15} suffix=" min" label="Target response time" />
+            <StatCounter value={2} label="Offices: London & Lagos" />
+            <StatCounter value={3} prefix="~" suffix=" min" label="Target response time" />
           </div>
         </div>
       </section>

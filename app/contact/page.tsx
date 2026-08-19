@@ -7,7 +7,7 @@ import ContactForm from "@/components/ContactForm";
 export const metadata: Metadata = {
   title: "Contact",
   description:
-    "Talk to an HD Networks engineer about satellite broadcast, data center & colocation, or managed IT support across the UK and Nigeria.",
+    "Talk to an HD Networks engineer about satellite broadcast, data center & colocation, or managed IT support. Serving clients worldwide from London and Lagos.",
 };
 
 export default function ContactPage() {
@@ -31,15 +31,33 @@ export default function ContactPage() {
             <div className="space-y-10">
               <div>
                 <p className="eyebrow text-signal-red mb-4">Direct</p>
+                <div className="flex items-start gap-3 text-[15px] mb-2">
+                  <Mail size={18} className="text-signal-blue mt-0.5 shrink-0" />
+                  <span>
+                    <a href="mailto:sales@hd-networks.com" className="link-underline">
+                      sales@hd-networks.com
+                    </a>
+                    <span className="text-slate"> — new business</span>
+                  </span>
+                </div>
                 <div className="flex items-start gap-3 text-[15px] mb-3">
                   <Mail size={18} className="text-signal-blue mt-0.5 shrink-0" />
-                  <a href="mailto:info@hd-networks.com" className="link-underline">
-                    info@hd-networks.com
-                  </a>
+                  <span>
+                    <a href="mailto:support@hd-networks.com" className="link-underline">
+                      support@hd-networks.com
+                    </a>
+                    <span className="text-slate"> — technical issues</span>
+                  </span>
                 </div>
                 <div className="flex items-start gap-3 text-[15px]">
                   <MapPin size={18} className="text-signal-blue mt-0.5 shrink-0" />
-                  <span>Operating across the United Kingdom &amp; Nigeria</span>
+                  <span>
+                    Kemp House, 160 City Road, London EC1V 2NX
+                    <br />
+                    Magodo Phase 2, Lagos, Nigeria
+                    <br />
+                    <span className="text-slate">Serving clients worldwide</span>
+                  </span>
                 </div>
               </div>
 
@@ -47,7 +65,7 @@ export default function ContactPage() {
                 <p className="eyebrow text-signal-red mb-4">Response time</p>
                 <div className="flex items-start gap-3 text-[15px]">
                   <Clock size={18} className="text-signal-blue mt-0.5 shrink-0" />
-                  <span>Existing clients: NOC monitored 24/7, all year round.</span>
+                  <span>~3 minute target response, NOC monitored 24/7, all year round.</span>
                 </div>
               </div>
 
