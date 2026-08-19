@@ -15,7 +15,7 @@ export default function ContactPage() {
     <>
       <PageHero
         eyebrow="Contact"
-        title="Let's talk about your infrastructure."
+        title="Let's talk about your project."
         description="Whether it's a broadcast link, a rack in colocation, or a network that needs to be more resilient — tell us what you're working on."
       />
 
