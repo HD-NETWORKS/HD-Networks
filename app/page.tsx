@@ -12,8 +12,8 @@ const SERVICES = [
     index: "01",
     title: "Satellite Broadcast",
     description:
-      "Uplink, downlink and teleport services for live broadcast, DSNG and content distribution.",
-    points: ["Teleport uplink & downlink", "DSNG & occasional-use links", "Playout & OTT distribution"],
+      "Uplink, downlink and teleport services for live broadcast, managed streaming and worldwide viewer distribution.",
+    points: ["Teleport uplink & downlink", "Multi-protocol streaming (SRT/RTMP/HLS)", "Browser-based viewer access"],
     href: "/services#broadcast",
   },
   {
@@ -22,7 +22,7 @@ const SERVICES = [
     title: "Data Center & Colocation",
     description:
       "Rack, cage and suite colocation on redundant power and cooling, engineered for continuous uptime.",
-    points: ["N+1 power & cooling", "24/7 remote hands", "Carrier-neutral cross-connects"],
+    points: ["N+1 power & cooling", "24/7 remote hands", "Hosted or self-managed equipment"],
     href: "/services#datacenter",
   },
   {
@@ -189,16 +189,17 @@ export default function HomePage() {
               Satellite broadcast infrastructure, engineered end to end.
             </h2>
             <p className="text-slate text-[17px] leading-relaxed mb-8">
-              From teleport uplink and downlink to DSNG, occasional-use links
-              and OTT distribution, HD Networks designs and operates the
-              broadcast chain that gets your signal to air — and keeps it there.
+              From teleport uplink and downlink to managed multi-protocol
+              streaming, HD Networks designs and operates the broadcast
+              chain that gets your signal to air — and keeps it there,
+              wherever your viewers are watching from.
             </p>
             <ul className="space-y-4 mb-10">
               {[
                 "Teleport uplink, downlink & satellite space segment",
-                "DSNG and occasional-use satellite links",
-                "Playout, encoding & OTT/streaming distribution",
-                "24/7 broadcast operations monitoring",
+                "Managed streaming — SRT, RTMP, HLS, ZIXI & more",
+                "Satellite support for viewers & end-users",
+                "Watch instantly in any browser — no app or decoder required",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[15px] text-ink/85">
                   <span className="mt-2 w-2 h-2 bg-signal-blue shrink-0" />
@@ -216,13 +217,13 @@ export default function HomePage() {
             <div className="bg-ink rounded-card p-8 md:p-10 relative overflow-hidden">
               <div className="absolute inset-0 bar-field text-white/[0.05]" aria-hidden />
               <div className="relative flex flex-col gap-6">
-                {["Uplink", "Space Segment", "Downlink", "Playout", "Distribution"].map((stage, i) => (
+                {["Uplink", "Space Segment", "Downlink", "Distribution"].map((stage, i) => (
                   <div key={stage} className="flex items-center gap-4">
                     <span className="font-mono text-xs text-white/40 w-6">{`0${i + 1}`}</span>
                     <div className="flex-1 h-9 bg-white/5 border border-white/10 rounded-card flex items-center px-4 relative overflow-hidden">
                       <span
                         className="absolute inset-y-0 left-0 bg-signal-blue/50"
-                        style={{ width: `${55 + i * 9}%` }}
+                        style={{ width: `${55 + i * 11}%` }}
                       />
                       <span className="relative font-mono text-[11px] uppercase tracking-wide text-white">
                         {stage}
@@ -230,6 +231,27 @@ export default function HomePage() {
                     </div>
                   </div>
                 ))}
+
+                <div className="flex items-center gap-4">
+                  <span className="font-mono text-xs text-white/40 w-6">05</span>
+                  <div className="flex-1 h-9 bg-white/5 border border-white/10 rounded-card flex items-center gap-2.5 px-3">
+                    <span className="flex gap-1 shrink-0">
+                      <span className="w-1.5 h-1.5 rounded-full bg-white/25" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-white/25" />
+                      <span className="w-1.5 h-1.5 rounded-full bg-white/25" />
+                    </span>
+                    <span className="flex-1 font-mono text-[11px] text-white/70 truncate">
+                      watch.hd-networks.com/live
+                    </span>
+                    <span className="flex items-center gap-1.5 text-signal-red font-mono text-[10px] shrink-0">
+                      <span className="w-1.5 h-1.5 rounded-full bg-signal-red animate-pulse-dot" />
+                      LIVE
+                    </span>
+                  </div>
+                </div>
+                <p className="relative font-mono text-[10px] text-white/35 uppercase tracking-wide -mt-3 pl-10">
+                  Viewer playback — any browser, no app required
+                </p>
               </div>
             </div>
           </Reveal>
