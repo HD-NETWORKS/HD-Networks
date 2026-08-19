@@ -30,7 +30,8 @@ export default function Footer() {
             />
             <p className="text-white/60 text-[15px] leading-relaxed max-w-xs">
               Satellite broadcast, data center &amp; colocation, and managed IT
-              infrastructure — engineered and monitored across the UK and Nigeria.
+              infrastructure — engineered and monitored for clients worldwide
+              from London and Lagos.
             </p>
           </div>
 
@@ -61,17 +62,27 @@ export default function Footer() {
           </div>
 
           <div>
-            <p className="eyebrow text-white/40 mb-5">Reach the NOC</p>
-            <ul className="space-y-4">
+            <p className="eyebrow text-white/40 mb-5">Contact</p>
+            <ul className="space-y-3">
               <li className="flex items-start gap-3 text-[15px] text-white/75">
                 <Mail size={16} className="mt-1 text-signal-red shrink-0" />
-                <a href="mailto:info@hd-networks.com" className="hover:text-white transition-colors">
-                  info@hd-networks.com
-                </a>
+                <span>
+                  <a href="mailto:sales@hd-networks.com" className="hover:text-white transition-colors">
+                    sales@hd-networks.com
+                  </a>
+                  <br />
+                  <a href="mailto:support@hd-networks.com" className="hover:text-white transition-colors">
+                    support@hd-networks.com
+                  </a>
+                </span>
               </li>
               <li className="flex items-start gap-3 text-[15px] text-white/75">
                 <MapPin size={16} className="mt-1 text-signal-red shrink-0" />
-                <span>United Kingdom &amp; Nigeria</span>
+                <span>
+                  Kemp House, 160 City Road, London EC1V 2NX
+                  <br />
+                  Magodo Phase 2, Lagos, Nigeria
+                </span>
               </li>
             </ul>
             <Link href="/contact" className="btn-ghost-dark mt-6">
