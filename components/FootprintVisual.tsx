@@ -56,7 +56,7 @@ export default function FootprintVisual() {
       </svg>
 
       <p className="font-mono text-[10px] text-white/35 uppercase tracking-wide text-center -mt-2">
-        Stylized representation — request a detailed footprint map for your location
+        Stylized representation: request a detailed footprint map for your location
       </p>
     </div>
   );

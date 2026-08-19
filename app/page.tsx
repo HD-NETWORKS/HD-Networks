@@ -49,7 +49,7 @@ const CAPABILITIES = [
   {
     n: "01",
     title: "Engineers, not ticket queues",
-    body: "Every account is backed by engineers who know satellite, data center and network infrastructure — not a first-line script.",
+    body: "Every account is backed by engineers who know satellite, data center and network infrastructure, not a first-line script.",
   },
   {
     n: "02",
@@ -92,7 +92,7 @@ export default function HomePage() {
               <Reveal delay={160}>
                 <p className="text-white/60 text-lg leading-relaxed max-w-xl mt-7">
                   HD Networks engineers and operates satellite broadcast links,
-                  data center &amp; colocation space, and managed IT infrastructure —
+                  data center &amp; colocation space, and managed IT infrastructure,
                   monitored around the clock for clients worldwide, from our
                   London and Lagos operations centers.
                 </p>
@@ -191,15 +191,15 @@ export default function HomePage() {
             <p className="text-slate text-[17px] leading-relaxed mb-8">
               From teleport uplink and downlink to managed multi-protocol
               streaming, HD Networks designs and operates the broadcast
-              chain that gets your signal to air — and keeps it there,
+              chain that gets your signal to air and keeps it there,
               wherever your viewers are watching from.
             </p>
             <ul className="space-y-4 mb-10">
               {[
                 "Teleport uplink, downlink & satellite space segment",
-                "Managed streaming — SRT, RTMP, HLS, ZIXI & more",
+                "Managed streaming: SRT, RTMP, HLS, ZIXI & more",
                 "Satellite support for viewers & end-users",
-                "Watch instantly in any browser — no app or decoder required",
+                "Watch instantly in any browser, no app or decoder required",
               ].map((item) => (
                 <li key={item} className="flex items-start gap-3 text-[15px] text-ink/85">
                   <span className="mt-2 w-2 h-2 bg-signal-blue shrink-0" />
@@ -250,7 +250,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="relative font-mono text-[10px] text-white/35 uppercase tracking-wide -mt-3 pl-10">
-                  Concept — viewer playback in any browser, no app required
+                  Concept: viewer playback in any browser, no app required
                 </p>
               </div>
             </div>

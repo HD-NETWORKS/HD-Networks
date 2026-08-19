@@ -57,7 +57,7 @@ export default function ContactForm() {
         <CheckCircle2 size={36} className="text-signal-blue mb-4" strokeWidth={1.75} />
         <p className="font-heading font-semibold text-lg mb-2">Message sent</p>
         <p className="text-slate text-sm max-w-xs">
-          Thanks — we&rsquo;ve received your message and will be in touch shortly.
+          Thanks, we&rsquo;ve received your message and will be in touch shortly.
         </p>
       </div>
     );
