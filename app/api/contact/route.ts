@@ -47,7 +47,7 @@ export async function POST(request: Request) {
     );
   }
 
-  const to = topic === "IT Support & Managed Services" ? SUPPORT_INBOX : SALES_INBOX;
+  const to = [SALES_INBOX, SUPPORT_INBOX];
   const from = process.env.RESEND_FROM_EMAIL || "HD Networks Website <onboarding@resend.dev>";
 
   const resend = new Resend(apiKey);
