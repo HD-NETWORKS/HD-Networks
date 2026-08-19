@@ -241,7 +241,7 @@ export default function HomePage() {
                       <span className="w-1.5 h-1.5 rounded-full bg-white/25" />
                     </span>
                     <span className="flex-1 font-mono text-[11px] text-white/70 truncate">
-                      watch.hd-networks.com/live
+                      yourbrand.watch/live
                     </span>
                     <span className="flex items-center gap-1.5 text-signal-red font-mono text-[10px] shrink-0">
                       <span className="w-1.5 h-1.5 rounded-full bg-signal-red animate-pulse-dot" />
@@ -250,7 +250,7 @@ export default function HomePage() {
                   </div>
                 </div>
                 <p className="relative font-mono text-[10px] text-white/35 uppercase tracking-wide -mt-3 pl-10">
-                  Viewer playback — any browser, no app required
+                  Concept — viewer playback in any browser, no app required
                 </p>
               </div>
             </div>

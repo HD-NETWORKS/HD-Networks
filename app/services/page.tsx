@@ -144,7 +144,7 @@ export default function ServicesPage() {
               A satellite footprint spanning West, Central, East &amp; Southern Africa.
             </h2>
             <p className="text-slate text-[16px] leading-relaxed mb-8">
-              Our C-band footprint reaches viewers and end-users across large
+              Our Ku-band footprint reaches viewers and end-users across large
               parts of the continent from a single teleport. Exact coverage
               and signal strength vary by beam and service — get in touch for
               a detailed footprint map for your location.
