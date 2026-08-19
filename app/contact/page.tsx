@@ -16,7 +16,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Let's talk about your project."
-        description="Whether it's a broadcast link, a rack in colocation, or a network that needs to be more resilient — tell us what you're working on."
+        description="Whether it's a broadcast link, a rack in colocation, or a network that needs to be more resilient, tell us what you're working on."
       />
 
       <section className="py-24 md:py-28">
@@ -37,7 +37,7 @@ export default function ContactPage() {
                     <a href="mailto:sales@hd-networks.com" className="link-underline">
                       sales@hd-networks.com
                     </a>
-                    <span className="text-slate"> — new business</span>
+                    <span className="text-slate"> (new business)</span>
                   </span>
                 </div>
                 <div className="flex items-start gap-3 text-[15px] mb-3">
@@ -46,7 +46,7 @@ export default function ContactPage() {
                     <a href="mailto:support@hd-networks.com" className="link-underline">
                       support@hd-networks.com
                     </a>
-                    <span className="text-slate"> — technical issues</span>
+                    <span className="text-slate"> (technical issues)</span>
                   </span>
                 </div>
                 <div className="flex items-start gap-3 text-[15px]">

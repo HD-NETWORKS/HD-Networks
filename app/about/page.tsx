@@ -24,7 +24,7 @@ const VALUES = [
   {
     icon: Globe2,
     title: "Two hubs, one team",
-    body: "Our London and Lagos operations centers share tooling, escalation paths and reporting — serving clients worldwide to the same standard.",
+    body: "Our London and Lagos operations centers share tooling, escalation paths and reporting, serving clients worldwide to the same standard.",
   },
   {
     icon: Users,
@@ -38,8 +38,8 @@ export default function AboutPage() {
     <>
       <PageHero
         eyebrow="About HD Networks"
-        title="Infrastructure built the way broadcast is built — to stay on."
-        description="HD Networks is an infrastructure provider spanning satellite broadcast, data center & colocation, and managed IT — serving clients worldwide from operations centers in London and Lagos."
+        title="Infrastructure built the way broadcast is built: to stay on."
+        description="HD Networks is an infrastructure provider spanning satellite broadcast, data center & colocation, and managed IT, serving clients worldwide from operations centers in London and Lagos."
       />
 
       <section className="py-24 md:py-28">
@@ -50,7 +50,7 @@ export default function AboutPage() {
               We started in broadcast. It shows in everything else we run.
             </h2>
             <p className="text-slate text-[16px] leading-relaxed mb-5">
-              Broadcast infrastructure has no tolerance for downtime — a lost
+              Broadcast infrastructure has no tolerance for downtime: a lost
               uplink is a lost broadcast, live, in front of an audience. HD
               Networks applies that same standard of signal continuity to data
               center, colocation and managed IT services.
@@ -119,7 +119,7 @@ export default function AboutPage() {
         <div className="container-hd relative py-20 md:py-24 flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           <Reveal>
             <h2 className="font-heading font-bold text-3xl md:text-4xl text-white max-w-xl">
-              Want infrastructure that runs like a broadcast signal — always on?
+              Want infrastructure that runs like a broadcast signal, always on?
             </h2>
           </Reveal>
           <Reveal delay={100}>

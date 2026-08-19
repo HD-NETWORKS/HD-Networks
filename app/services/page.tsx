@@ -9,7 +9,7 @@ import BackgroundVideo from "@/components/BackgroundVideo";
 export const metadata: Metadata = {
   title: "Services",
   description:
-    "Satellite broadcast, data center & colocation, managed IT support, and network connectivity — engineered and monitored for clients worldwide from London and Lagos.",
+    "Satellite broadcast, data center & colocation, managed IT support, and network connectivity, engineered and monitored for clients worldwide from London and Lagos.",
 };
 
 const SERVICES = [
@@ -20,12 +20,12 @@ const SERVICES = [
     eyebrow: "Broadcast",
     title: "Satellite Broadcast",
     description:
-      "End-to-end broadcast infrastructure — from teleport uplink to final-mile distribution — engineered for signal continuity and monitored around the clock.",
+      "End-to-end broadcast infrastructure, from teleport uplink to final-mile distribution, engineered for signal continuity and monitored around the clock.",
     features: [
       { t: "Teleport uplink & downlink", d: "Managed access to satellite space segment for permanent and occasional-use links." },
       { t: "Satellite viewer support", d: "Technical support for viewers and end-users receiving your signal via satellite, anywhere in our footprint." },
-      { t: "Managed streaming operations", d: "We monitor, manage and troubleshoot your live stream on your behalf — or hand you the controls." },
-      { t: "Multi-protocol & browser streaming", d: "SRT, RTMP, HLS and ZIXI ingest and delivery, with instant playback in any browser — no app or decoder required." },
+      { t: "Managed streaming operations", d: "We monitor, manage and troubleshoot your live stream on your behalf, or hand you the controls." },
+      { t: "Multi-protocol & browser streaming", d: "SRT, RTMP, HLS and ZIXI ingest and delivery, with instant playback in any browser, no app or decoder required." },
     ],
   },
   {
@@ -35,12 +35,12 @@ const SERVICES = [
     eyebrow: "Infrastructure",
     title: "Data Center & Colocation",
     description:
-      "Rack, cage and private suite colocation on redundant power and cooling — built so a single component failure never becomes your outage.",
+      "Rack, cage and private suite colocation on redundant power and cooling, built so a single component failure never becomes your outage.",
     features: [
       { t: "N+1 power & cooling", d: "Redundant electrical and thermal design engineered for continuous operation." },
       { t: "24/7 remote hands", d: "On-site engineers for installs, reboots and hardware swaps at any hour." },
       { t: "Carrier-neutral cross-connects", d: "Direct interconnects to carriers, ISPs and cloud on-ramps." },
-      { t: "Hosted streaming infrastructure", d: "We host and manage your streaming servers and equipment — or give you full remote control to self-manage." },
+      { t: "Hosted streaming infrastructure", d: "We host and manage your streaming servers and equipment, or give you full remote control to self-manage." },
       { t: "Physical & access security", d: "Monitored, access-controlled facilities protecting your hardware." },
     ],
   },
@@ -132,7 +132,7 @@ export default function ServicesPage() {
       <PageHero
         eyebrow="Services"
         title="Four disciplines. One operating standard."
-        description="Satellite broadcast, data center & colocation, managed IT support, and network connectivity — designed, deployed and monitored by the same team, to the same standard."
+        description="Satellite broadcast, data center & colocation, managed IT support, and network connectivity, designed, deployed and monitored by the same team, to the same standard."
       />
 
       <ServiceSection service={SERVICES[0]} idx={0} />
@@ -147,7 +147,7 @@ export default function ServicesPage() {
             <p className="text-slate text-[16px] leading-relaxed mb-8">
               Our Ku-band footprint reaches viewers and end-users across large
               parts of the continent from a single teleport. Exact coverage
-              and signal strength vary by beam and service — get in touch for
+              and signal strength vary by beam and service. Get in touch for
               a detailed footprint map for your location.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-5 mb-8">
@@ -187,7 +187,7 @@ export default function ServicesPage() {
           <Reveal>
             <p className="eyebrow text-signal-red mb-3">Inside the network</p>
             <p className="font-heading font-bold text-2xl md:text-3xl text-white max-w-lg leading-snug">
-              Real racks, real uplinks — monitored around the clock, not just on the brochure.
+              Real racks, real uplinks. Monitored around the clock, not just on the brochure.
             </p>
           </Reveal>
         </div>

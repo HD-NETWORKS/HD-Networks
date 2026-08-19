@@ -30,7 +30,7 @@ export default function Footer() {
             />
             <p className="text-white/60 text-[15px] leading-relaxed max-w-xs">
               Satellite broadcast, data center &amp; colocation, and managed IT
-              infrastructure — engineered and monitored for clients worldwide
+              infrastructure, engineered and monitored for clients worldwide
               from London and Lagos.
             </p>
           </div>
