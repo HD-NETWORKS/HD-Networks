@@ -78,11 +78,7 @@ export default function Footer() {
               </li>
               <li className="flex items-start gap-3 text-[15px] text-white/75">
                 <MapPin size={16} className="mt-1 text-signal-red shrink-0" />
-                <span>
-                  Kemp House, 160 City Road, London EC1V 2NX
-                  <br />
-                  Magodo Phase 2, Lagos, Nigeria
-                </span>
+                <span>Kemp House, 160 City Road, London EC1V 2NX</span>
               </li>
             </ul>
             <Link href="/contact" className="btn-ghost-dark mt-6">
