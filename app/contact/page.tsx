@@ -54,8 +54,6 @@ export default function ContactPage() {
                   <span>
                     Kemp House, 160 City Road, London EC1V 2NX
                     <br />
-                    Magodo Phase 2, Lagos, Nigeria
-                    <br />
                     <span className="text-slate">Serving clients worldwide</span>
                   </span>
                 </div>
